@@ -6,6 +6,8 @@ plugins {
 group 'net.william278'
 version '1.0'
 
+compileJava.options.release.set 11
+
 repositories {
     mavenCentral()
     mavenLocal()
