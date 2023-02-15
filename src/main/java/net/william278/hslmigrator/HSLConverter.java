@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.Base64;
 import java.util.HashMap;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 /**
@@ -80,7 +81,7 @@ public class HSLConverter {
                         .map(o -> new DataSerializer.AdvancementRecordDate(
                                 o.advancementKey(),
                                 o.awardedAdvancementCriteria()
-                        )).toList();
+                        )).collect(Collectors.toList());
             }
 
             return (List<DataSerializer.AdvancementRecordDate>) deserialize;
